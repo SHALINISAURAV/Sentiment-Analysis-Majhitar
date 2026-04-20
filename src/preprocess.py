@@ -3,14 +3,21 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
-nltk.download('stopwords')
+# safe stopwords load
+try:
+    stop_words = set(stopwords.words('english'))
+except:
+    nltk.download('stopwords')
+    stop_words = set(stopwords.words('english'))
+
 
 def clean_text(text):
     text = str(text).lower()
     text = re.sub(r"[^a-zA-Z ]", "", text)
     words = text.split()
-    words = [w for w in words if w not in stopwords.words('english')]
+    words = [w for w in words if w not in stop_words]
     return " ".join(words)
+
 
 def get_sentiment(rating):
     if rating >= 4:
@@ -20,8 +27,9 @@ def get_sentiment(rating):
     else:
         return "negative"
 
+
 def load_and_process():
-    df = pd.read_csv("data/reviews.csv")  # ✅ FIXED PATH
+    df = pd.read_csv("data/reviews.csv")
 
     df['clean_review'] = df['review'].apply(clean_text)
     df['sentiment'] = df['rating'].apply(get_sentiment)
