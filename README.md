@@ -41,7 +41,6 @@ The goal is to classify reviews into **Positive, Neutral, or Negative sentiments
 
 ## 📂 Project Structure
 
-```
 SENTIMENT-ANALYSIS-MAJOR
 ├── app/
 │   └── app.py                 # Streamlit UI
@@ -61,7 +60,6 @@ SENTIMENT-ANALYSIS-MAJOR
 ├── README.md
 ├── report.docx
 └── requirements.txt
-```
 
 ---
 
