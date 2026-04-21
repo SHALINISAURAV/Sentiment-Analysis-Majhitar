@@ -191,5 +191,3 @@ If you like this project, consider giving it a ⭐ on GitHub!
 ![Sentiment Distribution](outputs/Sentiment_Analyzer.png)
 
 ---
-
-💡 **Tip:** Once you deploy your Streamlit app, just replace the demo link above — that alone makes your project look 10x more professional on GitHub and during placements.
