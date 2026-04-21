@@ -194,5 +194,3 @@ The application is deployed using **Streamlit Cloud**.
 If you like this project, consider giving it a ⭐ on GitHub!
 
 ---
-
-💡 **Tip:** Make sure your screenshot file name matches exactly (`app_screenshot.png`) and is placed inside the `outputs/` folder.
