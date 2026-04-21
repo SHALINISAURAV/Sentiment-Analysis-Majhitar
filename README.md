@@ -70,7 +70,7 @@ SENTIMENT-ANALYSIS-MAJOR
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/sentiment-analysis-majhitar.git
+git clone https://github.com/SHALINISAURAV/sentiment-analysis-majhitar.git
 cd sentiment-analysis-majhitar
 ```
 
@@ -151,7 +151,7 @@ outputs/results.txt
 ## 🌐 Deployment
 
 The application is deployed using **Streamlit Cloud**.
-👉 Access it here: https://your-streamlit-app-link.streamlit.app
+👉 Access it here: [https://your-streamlit-app-link.streamlit.app](https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app)
 
 ---
 
@@ -188,7 +188,7 @@ If you like this project, consider giving it a ⭐ on GitHub!
 
 ## 📸 Screenshots
 
-![Sentiment Distribution](outputs//Users/pawan/sentiment-analysis-majhitar/notebooks/Sentiment_Distribution.png)
+![Sentiment Distribution](outputs/Sentiment_Analyzer.png)
 
 ---
 
