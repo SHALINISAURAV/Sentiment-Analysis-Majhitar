@@ -8,13 +8,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from src.preprocess import clean_text
 
-# load model + vectorizer (SEPARATE FIX)
-model = pickle.load(open("models/model.pkl", "rb"))
-vectorizer = pickle.load(open("models/vectorizer.pkl", "rb"))
+# load model + vectorizer (FIXED)
+model, vectorizer = pickle.load(open("models/model.pkl", "rb"))
 
 # UI
 st.title("🍽️ Restaurant Sentiment Analyzer")
-st.write("Enter a review and get sentiment prediction")
+st.write("Example: 'food was amazing but service slow'")
 
 user_input = st.text_area("Enter your review:")
 
@@ -26,7 +25,6 @@ if st.button("Predict"):
         input_vec = vectorizer.transform([cleaned])
         prediction = model.predict(input_vec)[0]
 
-        # FIXED LABEL HANDLING
         if prediction == "positive":
             st.success("😊 Positive Review")
         elif prediction == "neutral":
