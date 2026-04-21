@@ -127,6 +127,10 @@ outputs/results.txt
 
 ---
 
+## 📄 Project Report
+
+👉 [View Report](report.pdf)
+
 ## 🧪 Example Predictions
 
 | Review                   | Predicted Sentiment |
