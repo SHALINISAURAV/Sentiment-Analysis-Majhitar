@@ -34,4 +34,4 @@ def load_and_process():
     df['clean_review'] = df['review'].apply(clean_text)
     df['sentiment'] = df['rating'].apply(get_sentiment)
 
-    return df    return df
+ return df
