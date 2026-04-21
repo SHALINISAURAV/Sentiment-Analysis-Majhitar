@@ -10,9 +10,7 @@ The goal is to classify reviews into **Positive, Neutral, or Negative sentiments
 ## 🚀 Live Demo
 
 👉 **Try the app here:**
-🔗 https://your-streamlit-app-link.streamlit.app
-
-*(Replace this with your actual deployed link)*
+🔗 https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app
 
 ---
 
@@ -53,7 +51,8 @@ SENTIMENT-ANALYSIS-MAJOR
 │   └── analysis.ipynb        # EDA & visualization
 ├── outputs/
 │   ├── results.txt           # Evaluation results
-│   └── Sentiment_Distribution.png  # Graphs
+│   ├── Sentiment_Distribution.png  # Graphs
+│   └── app_screenshot.png    # App Screenshot
 ├── src/
 │   ├── preprocess.py         # Data cleaning
 │   ├── train.py              # Model training
@@ -62,151 +61,6 @@ SENTIMENT-ANALYSIS-MAJOR
 ├── report.docx
 └── requirements.txt
 ```
-
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/sentiment-analysis-majhitar.git
-cd sentiment-analysis-majhitar
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ How to Run
-
-### 1️⃣ Train the Model
-
-```bash
-PYTHONPATH=. python src/train.py
-```
-
-### 2️⃣ Evaluate the Model
-
-```bash
-PYTHONPATH=. python src/evaluate.py
-```
-
-### 3️⃣ Run Streamlit App
-
-```bash
-streamlit run app/app.py
-```
-
----
-
-## 📊 Model Performance
-
-* **Accuracy:** ~46% (depends on dataset size)
-* **Model:** Logistic Regression
-* **Feature Extraction:** TF-IDF
-
----
-
-## 📈 Outputs & Results
-
-### 🔹 Evaluation Results
-
-You can find detailed evaluation metrics inside:
-
-```
-outputs/results.txt
-```
-
-### 🔹 Sentiment Distribution Graph
-
-![Sentiment Distribution](outputs/Sentiment_Distribution.png)
-
----
-
-## 🧪 Example Predictions
-
-| Review                   | Predicted Sentiment |
-| ------------------------ | ------------------- |
-| Amazing food and service | 😊 Positive         |
-| It was okay              | 😐 Neutral          |
-| Very bad experience      | 😡 Negative         |
-
----
-
-## 📸 App Screenshots
-
-### 🏠 Home Page
-
-![Home Page](outputs/screenshot1.png)
-
-### 🔍 Prediction Result
-
-![Prediction](outputs/screenshot2.png)
-
----
-
-## ⚠️ Challenges Faced
-
-* Class imbalance in dataset
-* Path issues during deployment
-* Module import errors
-* Model loading errors (pickle)
-* Handling missing files in production
-
----
-
-## 🌐 Deployment
-
-The application is deployed using **Streamlit Cloud**.
-👉 Access it here: https://your-streamlit-app-link.streamlit.app
-
----
-
-## 🎯 Learning Outcomes
-
-* Built an end-to-end ML pipeline
-* Learned NLP preprocessing techniques
-* Understood feature engineering (TF-IDF)
-* Gained hands-on experience in deployment
-* Improved debugging and problem-solving skills
-
----
-
-## 🔮 Future Improvements
-
-* Use advanced models (LSTM / BERT)
-* Increase dataset size
-* Hyperparameter tuning
-* Deploy using FastAPI + React (SaaS level)
-
----
-
-## 👨‍💻 Author
-
-**Ritu**
-
----
-
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub!
-
----
-├── outputs/
-│   ├── results.txt           # Evaluation results
-│   └── Sentiment_Distribution.png  # Graphs
-├── src/
-│   ├── preprocess.py         # Data cleaning
-│   ├── train.py              # Model training
-│   └── evaluate.py           # Evaluation
-├── README.md
-├── report.docx
-└── requirements.txt
 
 ---
 
@@ -283,6 +137,12 @@ outputs/results.txt
 
 ---
 
+## 📸 App Screenshot
+
+![App Screenshot](outputs/app_screenshot.png)
+
+---
+
 ## ⚠️ Challenges Faced
 
 * Class imbalance in dataset
@@ -296,7 +156,7 @@ outputs/results.txt
 ## 🌐 Deployment
 
 The application is deployed using **Streamlit Cloud**.
-👉 Access it here: [https://your-streamlit-app-link.streamlit.app](https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app)
+👉 Access it here: https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app
 
 ---
 
@@ -321,7 +181,7 @@ The application is deployed using **Streamlit Cloud**.
 
 ## 👨‍💻 Author
 
-**Shalini Saurav**
+**SHALINISAURAV**
 
 ---
 
@@ -331,8 +191,4 @@ If you like this project, consider giving it a ⭐ on GitHub!
 
 ---
 
-## 📸 Screenshots
-
-![Sentiment Distribution](outputs/Sentiment_Analyzer.png)
-
----
+💡 **Tip:** Make sure your screenshot file name matches exactly (`app_screenshot.png`) and is placed inside the `outputs/` folder.
