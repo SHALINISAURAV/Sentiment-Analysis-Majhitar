@@ -1,24 +1,31 @@
-import sys
-import os
-
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-sys.path.insert(0, ROOT_DIR)
 import streamlit as st
-import pickle
 import sys
 import os
 
-# allow import path
+# fix import path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from src.preprocess import clean_text
+from src.preprocess import load_and_process
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
 
-# load model + vectorizer (FIXED)
-model, vectorizer = pickle.load(open("models/model.pkl", "rb"))
+# load data
+df = load_and_process()
+
+X = df['clean_review']
+y = df['sentiment']
+
+# vectorize
+vectorizer = TfidfVectorizer()
+X_vec = vectorizer.fit_transform(X)
+
+# train model
+model = LogisticRegression(max_iter=200, class_weight='balanced')
+model.fit(X_vec, y)
 
 # UI
 st.title("🍽️ Restaurant Sentiment Analyzer")
-st.write("Example: 'food was amazing but service slow'")
+st.write("Enter a review and get sentiment prediction")
 
 user_input = st.text_area("Enter your review:")
 
@@ -26,6 +33,7 @@ if st.button("Predict"):
     if user_input.strip() == "":
         st.warning("Please enter a review")
     else:
+        from src.preprocess import clean_text
         cleaned = clean_text(user_input)
         input_vec = vectorizer.transform([cleaned])
         prediction = model.predict(input_vec)[0]
@@ -35,4 +43,5 @@ if st.button("Predict"):
         elif prediction == "neutral":
             st.info("😐 Neutral Review")
         else:
+            st.error("😡 Negative Review")        else:
             st.error("😡 Negative Review")
