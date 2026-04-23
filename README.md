@@ -40,7 +40,7 @@ The goal is to classify reviews into **Positive, Neutral, or Negative sentiments
 ## 📂 Project Structure
 
 ```plaintext
-SENTIMENT-ANALYSIS-MAJOR
+SENTIMENT-ANALYSIS-MAJITAR
 ├── app/
 │   └── app.py                 # Streamlit UI
 ├── data/
@@ -126,6 +126,12 @@ outputs/results.txt
 ![Sentiment Distribution](outputs/Sentiment_Distribution.png)
 
 ---
+
+## 🔹 Confusion Matrix
+
+The confusion matrix helps visualize the performance of the classification model by comparing actual vs predicted sentiments.
+
+![Confusion Matrix](outputs/confusion_matrix.png)
 
 ## 📄 Project Report
 
