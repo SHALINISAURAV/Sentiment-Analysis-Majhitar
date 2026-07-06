@@ -285,7 +285,7 @@ The application is deployed using **Streamlit Cloud**.
 
 ---
 
-## 👨‍💻 Author
+## 👩‍💻 Author
 
 <div align="center">
 
