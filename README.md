@@ -1,77 +1,64 @@
 # 🍽️ Sentiment Analysis of Restaurant Reviews (Majhitar, Sikkim)
 
-<div align="center">
-
-### 🧠 NLP-based sentiment classification system for real-world restaurant reviews
-
-</div>
-
----
-
 ## 📌 Project Overview
 
-This project applies **Natural Language Processing (NLP)** techniques to analyze customer reviews of restaurants in Majhitar, Sikkim.
-
-The system classifies text reviews into:
-- 😊 Positive  
-- 😐 Neutral  
-- 😡 Negative  
-
-It also evaluates model performance using standard machine learning metrics.
+This project focuses on analyzing customer reviews of restaurants in Majhitar, Sikkim using Natural Language Processing (NLP) techniques.
+The goal is to classify reviews into **Positive, Neutral, or Negative sentiments** and evaluate model performance.
 
 ---
 
 ## 🚀 Live Demo
 
-👉 Try the application here:  
-https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app
+👉 **Try the app here:**
+🔗 https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app
 
 ---
 
-## ✨ Key Features
+## 🚀 Features
 
-- 🧹 Text preprocessing (cleaning, stopword removal, normalization)
-- 📊 TF-IDF feature extraction
-- 🤖 Logistic Regression classification model
-- 📈 Model evaluation (Accuracy, Precision, Recall, F1-score)
-- 🔥 Confusion matrix visualization
-- 🌐 Interactive Streamlit web application
-- ⚡ Real-time sentiment prediction
+* Text preprocessing (cleaning, stopword removal)
+* TF-IDF vectorization
+* Logistic Regression model
+* Model evaluation (Accuracy, Precision, Recall, F1-score)
+* Confusion Matrix visualization
+* Streamlit-based web application
+* Real-time sentiment prediction
 
 ---
 
 ## 🧠 Tech Stack
 
-- Python 🐍  
-- Pandas, NumPy  
-- Scikit-learn  
-- NLTK  
-- Matplotlib  
-- Streamlit  
+* Python
+* Pandas, NumPy
+* Scikit-learn
+* NLTK
+* Matplotlib
+* Streamlit
 
 ---
 
 ## 📂 Project Structure
 
-```
-SENTIMENT-ANALYSIS-MAJHITAR
+```plaintext
+SENTIMENT-ANALYSIS-MAJITAR
 ├── app/
-│   └── app.py
+│   └── app.py                 # Streamlit UI
 ├── data/
-│   └── reviews.csv
+│   └── reviews.csv           # Dataset
 ├── models/
-│   └── model.pkl
+│   └── model.pkl             # Trained model
 ├── notebooks/
-│   └── analysis.ipynb
+│   └── analysis.ipynb        # EDA & visualization
 ├── outputs/
-│   ├── results.txt
-│   ├── Sentiment_Distribution.png
-│   └── confusion_matrix.png
+│   ├── results.txt           # Evaluation results
+│   ├── Sentiment_Distribution.png  # Graphs
+│   └── app_screenshot.png    # App Screenshot
 ├── src/
-│   ├── preprocess.py
-│   ├── train.py
-│   └── evaluate.py
+│   ├── preprocess.py         # Data cleaning
+│   ├── train.py              # Model training
+│   └── evaluate.py           # Evaluation
 ├── README.md
+├── report.docx
 └── requirements.txt
 ```
 
@@ -79,9 +66,16 @@ SENTIMENT-ANALYSIS-MAJHITAR
 
 ## ⚙️ Installation
 
+Clone the repository:
+
 ```bash
 git clone https://github.com/SHALINISAURAV/sentiment-analysis-majhitar.git
 cd sentiment-analysis-majhitar
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -89,17 +83,20 @@ pip install -r requirements.txt
 
 ## ▶️ How to Run
 
-### Train Model
+### 1️⃣ Train the Model
+
 ```bash
-python src/train.py
+PYTHONPATH=. python src/train.py
 ```
 
-### Evaluate Model
+### 2️⃣ Evaluate the Model
+
 ```bash
-python src/evaluate.py
+PYTHONPATH=. python src/evaluate.py
 ```
 
-### Run App
+### 3️⃣ Run Streamlit App
+
 ```bash
 streamlit run app/app.py
 ```
@@ -108,53 +105,98 @@ streamlit run app/app.py
 
 ## 📊 Model Performance
 
-- Model: Logistic Regression  
-- Features: TF-IDF Vectorization  
-- Baseline Accuracy: ~46% (depends on dataset quality and size)
+* **Accuracy:** ~46% (depends on dataset size)
+* **Model:** Logistic Regression
+* **Feature Extraction:** TF-IDF
 
 ---
 
-## 📈 Results
+## 📈 Outputs & Results
 
-- Evaluation metrics stored in `outputs/results.txt`
-- Visual insights via confusion matrix and sentiment distribution plots
+### 🔹 Evaluation Results
 
----
+You can find detailed evaluation metrics inside:
 
-## 🧪 Sample Predictions
+```
+outputs/results.txt
+```
 
-| Review | Sentiment |
-|--------|------------|
-| Amazing food and service | 😊 Positive |
-| It was okay | 😐 Neutral |
-| Very bad experience | 😡 Negative |
+### 🔹 Sentiment Distribution Graph
 
----
-
-## ⚠️ Challenges
-
-- Limited dataset size affecting accuracy  
-- Class imbalance in sentiment labels  
-- Deployment path and import issues  
-- Model serialization (pickle handling)
+![Sentiment Distribution](outputs/Sentiment_Distribution.png)
 
 ---
 
-## 🚀 Future Improvements
+## 🔹 Confusion Matrix
 
-- Upgrade to BERT / transformer-based models  
-- Improve dataset size and quality  
-- Hyperparameter tuning  
-- Deploy as full-stack app (FastAPI + frontend UI)
+The confusion matrix helps visualize the performance of the classification model by comparing actual vs predicted sentiments.
+
+![Confusion Matrix](outputs/confusion_matrix.png)
+
+## 📄 Project Report
+
+👉 [View Report](report.pdf)
+
+## 🧪 Example Predictions
+
+| Review                   | Predicted Sentiment |
+| ------------------------ | ------------------- |
+| Amazing food and service | 😊 Positive         |
+| It was okay              | 😐 Neutral          |
+| Very bad experience      | 😡 Negative         |
 
 ---
 
-## 👨‍💻 Author
+## 📸 App Screenshot
 
-**Shalini Saurav**
+![App Screenshot](outputs/app_screenshot.png)
+
+---
+
+## ⚠️ Challenges Faced
+
+* Class imbalance in dataset
+* Path issues during deployment
+* Module import errors
+* Model loading errors (pickle)
+* Handling missing files in production
+
+---
+
+## 🌐 Deployment
+
+The application is deployed using **Streamlit Cloud**.
+👉 Access it here: https://sentiment-analysis-majhitar-rt6lcycxzndimdes9rwqca.streamlit.app
+
+---
+
+## 🎯 Learning Outcomes
+
+* Built an end-to-end ML pipeline
+* Learned NLP preprocessing techniques
+* Understood feature engineering (TF-IDF)
+* Gained hands-on experience in deployment
+* Improved debugging and problem-solving skills
+
+---
+
+## 🔮 Future Improvements
+
+* Use advanced models (LSTM / BERT)
+* Increase dataset size
+* Hyperparameter tuning
+* Deploy using FastAPI + React (SaaS level)
+
+---
+
+## 👩‍💻 Author
+
+**SHALINISAURAV**
 
 ---
 
 ## ⭐ Support
 
-If you found this useful, consider starring the repository!
+If you like this project, consider giving it a ⭐ on GitHub!
+
+---
